@@ -7,10 +7,9 @@ coords=[tuple(map(float,input().split())) for i in range(n)]
 adj=[[] for i in range(n)]
 
 for i in range(m):
-    p,q,w=input().split()
-    p,q,w=int(p),int(q),float(w)
-    adj[p].append((q,w))
-    adj[q].append((p,w))
+    p, q, w = map(int, input("Enter u v weight: ").split())
+    adj[p].append((q, w))
+    adj[q].append((p, w))
 
 def astar(s,t,n,adj,coords):
     def h(u):
